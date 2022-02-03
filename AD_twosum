@@ -1,0 +1,11 @@
+def twosum( nums, target ):
+  hashmap ={}
+  for i in range (len(nums )):
+    complement = target - nums[i]
+    if complement in hashmap:
+      return [nums[i], complement]
+    hashmap[nums[i]] = i
+  
+nums = [2,7,11,15]
+target = 9
+twosum(nums, target)
